@@ -243,7 +243,7 @@ const TshirtCatalog = () => {
                   Add to Cart
                 </button>
               ) : (
-                <span id="add-to-cart">
+                <span id="add-to-cart-alt">
                   <button onClick={() => handleDecreaseQuantity(tshirt.id)}>-</button>
                   <span>{cartItems[tshirt.id]}</span>
                   <button onClick={() => handleAddToCart(tshirt.id)}>+</button>
