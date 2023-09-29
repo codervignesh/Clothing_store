@@ -1,0 +1,252 @@
+/* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    z-index: 1000;
+}
+
+/* Add a placeholder to maintain space when the header is fixed */
+.placeholder {
+    height: 0px;
+}
+
+.title {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin: 0;
+    color: white; /* Set the text color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Add a smooth color transition on hover */
+  }
+
+/* Cart icon styles */
+.cart-link {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+/* T-shirt card container styles */
+.tshirt-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px;
+    margin-top: 50px;
+    padding-top: 80px;
+}
+
+.tshirt-card-container.filters-open {
+    margin-left: 180px; /* Adjust the left margin to create space for filters */
+  }
+
+/* T-shirt card styles */
+.tshirt-card {
+    position: relative;
+    width: calc(20% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Price styles */
+.price {
+    position: absolute;
+    bottom: 28px;
+    left: 10px;
+    font-weight: bold;
+}
+
+/* Quantity controls styles */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the minus button and plus button */
+.quantity-controls button:nth-child(1),
+.quantity-controls button:nth-child(3),
+.quantity-controls button:nth-child(2) {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style for the quantity number */
+.quantity-controls span {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+/* Add to Cart button styles */
+#add-to-cart {
+    position: absolute;
+    bottom: 35px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* T-shirt image styles */
+.tshirt-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Error message styles */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+@media (max-width: 1300px) {
+    .tshirt-card.filters-open {
+        width: calc(30% - 20px);
+    }
+}
+
+@media (max-width: 1000px) {
+    .tshirt-card.filters-open {
+        width: calc(40% - 20px);
+    }
+    .tshirt-card {
+        width: calc(30% - 20px);
+    }
+}
+
+@media (max-width: 700px) {
+    .tshirt-card.filters-open {
+        width: calc(50% - 20px);
+    }
+    .tshirt-card {
+        width: calc(40% - 20px);
+    }
+
+}
+
+@media (max-width: 550px) {
+    .tshirt-card {
+        width: calc(50% - 20px);
+    }
+    .tshirt-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: -10px;
+    }
+}
+
+.filters {
+    background-color: #f0f0f0; /* Background color for the filters section */
+    padding: 20px; /* Add some padding */
+    width: 150px; /* Adjust the width as needed */
+    position: fixed; /* Fixed position to stay on the left side */
+    top: 50px;
+    left: -250px; /* Initially hidden to the left */
+    height: 100%; /* Full height */
+    overflow-y: auto; /* Add scroll if needed */
+    transition: left 0.3s; /* Smooth transition animation for opening/closing */
+    z-index: 1; 
+  }
+  
+  .filters.show {
+    left: 0; /* Show the filters when the class "show" is added */
+  }
+  
+  /* Style for individual filter options */
+  .filters h2 {
+    font-size: 20px;
+  }
+  
+  .filters h3 {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .filters label {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .filters input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  /* Style for the "Filters" button */
+.filter-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 2;
+    position: fixed;
+    margin-top: 16px;
+  }
+  
+  .filter-button:hover {
+    background-color: #555;
+  }
+  
+  /* Search bar container styles */
+.search-bar-container {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    /* margin-bottom: 20px; */
+    z-index: 1;
+    background-color: #fff;
+    width: 100%;
+    height: 70px;
+  }
+  
+  /* Search input styles */
+  .search-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px; /* Adjust the width as needed */
+    font-size: 16px;
+    outline: none;
+    margin-left: 200px;
+  }
+  
+  /* Placeholder text styles */
+  .search-input::placeholder {
+    color: #aaa; /* Adjust the placeholder text color */
+  }
+  
+  /* Search icon styles (optional) */
+  .search-icon {
+    margin-left: 10px; /* Adjust the margin as needed */
+    cursor: pointer;
+    font-size: 20px;
+    color: #007bff; /* Adjust the icon color */
+  }
+  
+  /* Search icon hover effect (optional) */
+  .search-icon:hover {
+    color: #0056b3; /* Adjust the hover color */
+  }
+  
