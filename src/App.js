@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import TshirtCatalog from './components/TshirtCatalog/TshirtCatalog.js';
 import Cart from './components/Cart/Cart.js'; // Import the Cart component
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
