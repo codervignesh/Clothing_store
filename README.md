@@ -1,5 +1,5 @@
 # Clothing Store
-
+## Demo Link: https://codervignesh.github.io/Clothing_store/#/ 
 ## Overview
 
 Clothing Store is a web application built using React.js and Redux that simulates an online clothing store. It consists of two main pages: the catalog page and the cart page. Users can browse through a catalog of items, apply filters, and add or remove items from their cart.
